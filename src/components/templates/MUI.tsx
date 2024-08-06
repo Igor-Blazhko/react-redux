@@ -1,4 +1,5 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
+import { Favorite, FavoriteBorder } from "@mui/icons-material";
+import { Button, Checkbox, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControlLabel } from "@mui/material";
 import { useState } from "react";
 
 const Mui = () => {
@@ -15,7 +16,16 @@ const Mui = () => {
     return (
       <>
         <Button onClick={handleClickOpen} color="primary" autoFocus>
-          Agree
+          <FormControlLabel
+            control={
+              <Checkbox
+                icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+                name="checkedH"
+              />
+            }
+            label="Like"
+          />
         </Button>
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>{"Use Google's location service?"}</DialogTitle>
