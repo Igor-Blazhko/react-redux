@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { decrement, increment, setValue } from "../../redux-toolkit/redusers/counterReduser";
 import { useRef } from "react";
+import { Button, IconButton, Input } from "@mui/material";
 
 const Counter = () => {
     const inputCount = useRef   <HTMLInputElement>(null);
@@ -16,11 +17,19 @@ const Counter = () => {
     return (
       <>
         <section>
-          <button onClick={up}>+1</button>
-          <button onClick={down}>-1</button>
+          <IconButton aria-label="delete" color="primary">
+          </IconButton>
+          <Button variant="contained" color="primary" onClick={up}>
+            +1
+          </Button>
+          <Button variant="contained" color="primary" onClick={down}>
+            -1
+          </Button>
           <span>
-            <input type="text" ref={inputCount} />
-            <button onClick={set}>Задать</button>
+            <Input type="text" ref={inputCount} />
+            <Button variant="contained" color="secondary" onClick={set}>
+              Задать
+            </Button>
           </span>
         </section>
       </>
