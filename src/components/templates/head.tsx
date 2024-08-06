@@ -22,6 +22,7 @@ const Head: FC<{ isMobx?: boolean }> = ({ isMobx }) => {
         <Link to="/Placeholder">Placeholder </Link>
         <Link to="/Saga">Saga </Link>
         <Link to="/Zus">Zus </Link>
+        <Link to="/Effect">Effect </Link> 
       </nav>
     </header>
   );

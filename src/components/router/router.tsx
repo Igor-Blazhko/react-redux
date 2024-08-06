@@ -6,6 +6,7 @@ import Placehold from "../templates/placehold";
 import Saga from "../pages/sagas";
 import { FC } from "react";
 import Zus from "../pages/zus";
+import Effect from "../pages/Effect";
 
 const Router: FC<{isMobx?: boolean}> = ({ isMobx }) => {
   if (isMobx) return (
@@ -21,6 +22,7 @@ const Router: FC<{isMobx?: boolean}> = ({ isMobx }) => {
         <Route path="Placeholder" element={<Placehold />} />
         <Route path="Saga" element={<Saga />} />
         <Route path="Zus" element={<Zus />} />
+        <Route path="Effect" element={<Effect />} />
       </Routes>
     );
 };
