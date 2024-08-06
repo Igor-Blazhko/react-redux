@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FC } from "react";
 
 const Head: FC<{ isMobx?: boolean }> = ({ isMobx }) => {
-  // const count = useSelector(getCounter);
+  const count = useSelector(getCounter);
   if (isMobx)
     return (
       <header>
@@ -13,13 +13,14 @@ const Head: FC<{ isMobx?: boolean }> = ({ isMobx }) => {
         </nav>
       </header>
     );
+  console.log('render')
   return (
     <header>
-      {/* Count: {count} */}
+      Count: {count}
       <nav>
-        <Link to="*">Main</Link>
-        <Link to="/Placeholder">Placeholder</Link>
-        <Link to="/Saga">Saga</Link>
+        <Link to="*">Main </Link>
+        <Link to="/Placeholder">Placeholder </Link>
+        <Link to="/Saga">Saga </Link>
       </nav>
     </header>
   );

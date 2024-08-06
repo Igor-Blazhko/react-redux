@@ -13,4 +13,4 @@ export const placeholderAPI = createApi({
     })
   }),
 });
-export const{ useGetUsersQuery, useGetPostsQuery } = placeholderAPI;
+export const { useGetUsersQuery, useGetPostsQuery } = placeholderAPI;
